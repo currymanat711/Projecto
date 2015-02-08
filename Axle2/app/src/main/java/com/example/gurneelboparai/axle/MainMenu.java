@@ -1,9 +1,12 @@
 package com.example.gurneelboparai.axle;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainMenu extends ActionBarActivity {
@@ -35,5 +38,23 @@ public class MainMenu extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public class whenButtonClicked extends Activity{
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.main);
+            Button btn=(Button)findViewById(R.id.widget45);
+            btn.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View v) {
+                    Intent inf=new Intent(TestbuttontestActivity.this,Activityfullscreen.class);
+
+                    startActivity(inf);
+                }
+            });
+        }
+    }
     }
 }
