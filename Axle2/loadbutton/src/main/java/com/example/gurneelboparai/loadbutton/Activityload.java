@@ -1,30 +1,25 @@
-package com.example.gurneelboparai.axle;
+package com.example.gurneelboparai.loadbutton;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-
-import com.example.gurneelboparai.loadbutton.Activityload;
 
 
-public class MainMenu extends ActionBarActivity {
+public class Activityload extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_activityload);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_activityload, menu);
         return true;
     }
 
@@ -41,23 +36,5 @@ public class MainMenu extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public class whenButtonClicked extends Activity{
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.main);
-            Button btn=(Button)findViewById(R.id.widget45);
-            btn.setOnClickListener(new View.OnClickListener() {
-
-                public void onClick(View v) {
-                    Intent inf=new Intent( MainMenu.this,Activityload.class);
-
-                    startActivity(inf);
-                }
-            });
-        }
-    }
     }
 }
